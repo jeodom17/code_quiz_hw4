@@ -1,10 +1,17 @@
-var quizBox = document.querySelector(".quiz-box");
-var question = document.querySelector(".question");
-var answers = document.querySelector(".answers");
-var answer1 = document.querySelector(".answer1");
-var answer2 = document.querySelector(".answer2");
-var answer3 = document.querySelector(".answer3");
-var answer4 = document.querySelector(".answer4");
+// document.getElementById("test-button");
+
+// testButton.addEventListener("click", buttonClick);
+
+// function buttonClick() {
+//   console.log("test click");
+//   document.getElementById("tester").textContent = "You clicked me";
+// }
+
+var mainEl = document.querySelector('main');
+var quizBox = document.getElementById('quiz-box');
+var highScore = document.getElementById('vhs');
+
+
 
 // Array for question and answers
 
@@ -62,4 +69,3 @@ var qAndA6 = [
         answer4 = "RandomNumber()"
     }
 ]
-
