@@ -4,16 +4,79 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    align-content: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
 }
 
 #vhs {
-    font-size: 20px;
+    font-size: 30px;
     margin: 10px;
 }
 
 
 #quiz-box {
-   
-    
-} */
+  margin-top: 75px;
+} 
 
+#qTitle {
+    font-size: 50px;
+}
+
+#qMessage {
+    font-size: 25px;
+}
+
+#qBut {
+    font-size: 25px;
+    padding: 10px;
+}
+
+#ans1 {
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#ans2 {
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#ans3 {
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#ans4 {
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#finish {
+    font-size: 50px; 
+}
+#finSco {
+    font-size: 40px;
+    margin-bottom: 60px;
+}
+#initialBox {
+    font-size: 30px;
+}
+#initials2 {
+    font-size: 30px;
+}
+#subBut {
+    font-size: 30px;
+    margin-left: 10px;
+}

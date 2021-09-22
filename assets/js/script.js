@@ -71,7 +71,7 @@ var qAndA6 = [
         answer2: "Math.random();",
         answer3: "random.integer",
         answer4: "RandomNumber()",
-        correctAnswer: "Math.random()"
+        correctAnswer: "Math.random();"
     }
 ]
 
@@ -83,7 +83,7 @@ function init() {
   quizBox.appendChild(quizTitle);
 
   var quizMessage = document.createElement('p');
-  quizMessage.innerHTML = 'Try to answer the following code related questions before the timer runs out! INCORRECT answers reduce your score time by 10 seconds';
+  quizMessage.innerHTML = 'Try to answer the following code related questions before the timer runs out! INCORRECT answers reduce your score time by 10 seconds!!!';
   quizMessage.setAttribute('id', 'qMessage');
   quizBox.appendChild(quizMessage);
 
@@ -143,7 +143,9 @@ function questionOne() {
 
 }
 
-function questionTWO() {
+function questionTWO(event) {
+  console.log('here',event.target.innerHTML);
+  checkAnswer(event.target.innerHTML, qAndA1[0].correctAnswer);
   document.getElementById('ques1').remove();
   document.getElementById('ans1').remove();
   document.getElementById('ans2').remove();
@@ -184,13 +186,18 @@ function questionTWO() {
   answerFour.style.height = '50px';
   quizBox.appendChild(answerFour);
 
+
   ans1.addEventListener('click', questionThree);
   ans2.addEventListener('click', questionThree);
   ans3.addEventListener('click', questionThree);
   ans4.addEventListener('click', questionThree);
+
+
 }
 
 function questionThree() {
+  checkAnswer(event.target.innerHTML, qAndA2[0].correctAnswer);
+
   document.getElementById('ques1').remove();
   document.getElementById('ans1').remove();
   document.getElementById('ans2').remove();
@@ -238,6 +245,8 @@ function questionThree() {
 }
 
 function questionFour() {
+  checkAnswer(event.target.innerHTML, qAndA3[0].correctAnswer);
+
   document.getElementById('ques1').remove();
   document.getElementById('ans1').remove();
   document.getElementById('ans2').remove();
@@ -285,6 +294,8 @@ function questionFour() {
 }
 
 function questionFive() {
+  checkAnswer(event.target.innerHTML, qAndA4[0].correctAnswer);
+
   document.getElementById('ques1').remove();
   document.getElementById('ans1').remove();
   document.getElementById('ans2').remove();
@@ -332,6 +343,8 @@ function questionFive() {
 }
 
 function questionSix() {
+  checkAnswer(event.target.innerHTML, qAndA5[0].correctAnswer);
+
   document.getElementById('ques1').remove();
   document.getElementById('ans1').remove();
   document.getElementById('ans2').remove();
@@ -379,6 +392,8 @@ function questionSix() {
 }
 
 function finishPage() {
+  checkAnswer(event.target.innerHTML, qAndA6[0].correctAnswer);
+
   document.getElementById('ques1').remove();
   document.getElementById('ans1').remove();
   document.getElementById('ans2').remove();
@@ -396,7 +411,7 @@ function finishPage() {
   quizBox.appendChild(fScore);
   
   var initials = document.createElement('label');
-  initials.innerHTML='Enter Initials';
+  initials.innerHTML='Enter Initials : ';
   initials.setAttribute('id', 'initials2');
   quizBox.appendChild(initials);
 
@@ -413,10 +428,24 @@ function finishPage() {
   subBut.addEventListener('click', highScore); 
 }
 
+function checkAnswer(userAnswer, correctAnswer) {
+// compare userAnswer to correctAnswer
+//logic for check answer
+var answerCheck = document.createElement('div');
+answerCheck.innerHTML='right or wrong';
+answerCheck.setAttribute('id', 'rightWrong');
+quizBox.appendChild.answerCheck;
+
+return (userAnswer == correctAnswer);
+}
+
+document.getElementById('rightWrong');
+
+
 function highScore() {
   
 
 }
-
+// checkAnswer();
 //Page load function called
 init();
