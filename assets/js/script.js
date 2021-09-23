@@ -10,7 +10,7 @@
 var mainEl = document.querySelector('main');
 var quizBox = document.getElementById('quiz-box');
 var highScore = document.getElementById('vhs');
-
+var results = document.querySelector('checkAnswe');
 
 // Array for question and answers
 
@@ -195,7 +195,7 @@ function questionTWO(event) {
 
 }
 
-function questionThree() {
+function questionThree(event) {
   checkAnswer(event.target.innerHTML, qAndA2[0].correctAnswer);
 
   document.getElementById('ques1').remove();
@@ -244,7 +244,7 @@ function questionThree() {
   ans4.addEventListener('click', questionFour);
 }
 
-function questionFour() {
+function questionFour(event) {
   checkAnswer(event.target.innerHTML, qAndA3[0].correctAnswer);
 
   document.getElementById('ques1').remove();
@@ -293,7 +293,7 @@ function questionFour() {
   ans4.addEventListener('click', questionFive);
 }
 
-function questionFive() {
+function questionFive(event) {
   checkAnswer(event.target.innerHTML, qAndA4[0].correctAnswer);
 
   document.getElementById('ques1').remove();
@@ -342,7 +342,7 @@ function questionFive() {
   ans4.addEventListener('click', questionSix);
 }
 
-function questionSix() {
+function questionSix(event) {
   checkAnswer(event.target.innerHTML, qAndA5[0].correctAnswer);
 
   document.getElementById('ques1').remove();
@@ -391,7 +391,7 @@ function questionSix() {
   ans4.addEventListener('click', finishPage);
 }
 
-function finishPage() {
+function finishPage(event) {
   checkAnswer(event.target.innerHTML, qAndA6[0].correctAnswer);
 
   document.getElementById('ques1').remove();
@@ -431,15 +431,16 @@ function finishPage() {
 function checkAnswer(userAnswer, correctAnswer) {
 // compare userAnswer to correctAnswer
 //logic for check answer
-var answerCheck = document.createElement('div');
-answerCheck.innerHTML='right or wrong';
-answerCheck.setAttribute('id', 'rightWrong');
-quizBox.appendChild.answerCheck;
+results = document.getElementById('checkAnswe');
+results.innerHTML=(userAnswer==correctAnswer);
+results.setAttribute("style", "color: red; font-size: 30px");
+// quizBox.appendChild(results);
+console.log(userAnswer==correctAnswer);
 
-return (userAnswer == correctAnswer);
+
 }
 
-document.getElementById('rightWrong');
+
 
 
 function highScore() {
